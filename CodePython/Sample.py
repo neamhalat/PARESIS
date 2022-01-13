@@ -172,7 +172,7 @@ class AnalyticalSample(Sample):
                 plt.figure()
                 plt.imshow(self.myGeometry[0])
                 plt.colorbar()
-                plt.show()
+                plt.show(block=False)
                 return   
             if self.myGeometryFunction=="CreateSampleCylindre":
                 self.myGeometry, self.myRadius=CreateSampleCylindre(self.myName,studyDimensions[0], studyDimensions[1], studyPixelSize)
@@ -180,7 +180,7 @@ class AnalyticalSample(Sample):
                 plt.figure()
                 plt.imshow(self.myGeometry[0])
                 plt.colorbar()
-                plt.show()
+                plt.show(block=False)
                 return                
             if self.myGeometryFunction=="CreateSampleSpheresInTube":
                 self.myGeometry =CreateSampleSpheresInTube(self.myName,studyDimensions[0], studyDimensions[1], studyPixelSize)
@@ -191,7 +191,7 @@ class AnalyticalSample(Sample):
                 plt.figure()
                 plt.imshow(self.myGeometry)
                 plt.colorbar()
-                plt.show()
+                plt.show(block=False)
                 return       
             if self.myGeometryFunction=="generateContrastPhantom":
                 self.myGeometry=generateContrastPhantom(studyDimensions[0],studyDimensions[1],studyPixelSize, angle=30)

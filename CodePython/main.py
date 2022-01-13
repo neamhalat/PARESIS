@@ -29,17 +29,20 @@ if __name__ == "__main__":
     ## PARAMETERS TO SET
     # Define experiment 
     exp_dict['experimentName']="SIMAP_SpheresInTube"
+
+                                            
     # Output filepath to store the result images
-    exp_dict['filepath']='../Results/SIMAP_SpheresInTube/'
+    exp_dict['filepath']= r'C:\Users\Strobe\Desktop\NEAM'
     # Define algorithm parameters
-    exp_dict['sampleSampling']=10 # MUST BE AN INTEGER
-    exp_dict['nbExpPoints']=2 #number of pair of acquisitions (Ir, Is) simulated with different positions of the membrane
+    exp_dict['sampleSampling']=2 # MUST BE AN INTEGER
+    exp_dict['nbExpPoints']=1 #number of pair of acquisitions (Ir, Is) simulated with different positions of the membrane
     exp_dict['margin']=10 #with Fresnel there might be an aliasing issue so we need to extend very slightly the image for calculations
     save=True
-    exp_dict['simulation_type']="Fresnel" #"Fresnel" or "RayT" 
+    exp_dict['simulation_type']="RayT" #"Fresnel" or "RayT" 
 
    
-    #************************************************************************
+    #*******************************
+    # *****************************************
     now=datetime.datetime.now()
     exp_dict['expID']=now.strftime("%Y%m%d-%H%M%S") #define experiment ID
     
